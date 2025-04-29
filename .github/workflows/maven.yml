@@ -26,6 +26,18 @@ jobs:
           distribution: 'temurin' #  Use Temurin (Adoptium) distribution.  Good, open-source choice.
           cache: maven #  For a Maven project.  If you use Gradle, change to 'gradle'.
 
+      #  Check Java version
+      - name: Check Java Version
+        run: |
+          echo "Java version:"
+          java -version
+
+      #  Check Maven version
+      - name: Check Maven Version
+        run: |
+          echo "Maven version:"
+          mvn -v
+
       #  Optionally, you might need to set up other tools (e.g., Node.js, Python) here.
       #  Example for Node.js:
       # - name: Set up Node.js
@@ -47,7 +59,10 @@ jobs:
 
       #  Optionally, build an executable JAR or WAR file.
       - name: Build with Maven
-        run: mvn package -DskipTests -Dmaven.compiler.source=17 -Dmaven.compiler.target=17 #  Or, for a Spring Boot project:  mvn package -DskipTests
+        run: |
+          mvn clean package -DskipTests \
+          -Dmaven.compiler.source=17 \
+          -Dmaven.compiler.target=17
         # For Gradle:
         # run: gradle build
 
