@@ -1,2 +1,0 @@
-# Nafes Platform Automation Testing
-
