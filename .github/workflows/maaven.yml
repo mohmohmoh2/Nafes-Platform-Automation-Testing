@@ -51,11 +51,10 @@ jobs:
         # For Gradle:
         # run: gradle build
 
-      #  Optional:  Upload artifacts (e.g., JAR file) if you want to store them.
+      #  Upload artifacts (e.g., JAR file) if you want to store them.
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4 #  UPGRADE TO v4 HERE
         with:
           name: application-artifact #  Name you'll use to identify the artifact in the UI.
           path: target/ #  Path to the directory containing the JAR or WAR file (adjust as needed).
           #  If using Gradle, the path is likely build/libs/
-
