@@ -1,35 +1,60 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+# This is a basic workflow for running a Java project with tests on GitHub Actions
+name: Java CI # Name of your workflow.  Will appear in the Actions tab of your repository.
 
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-name: Java CI with Maven
-
+# Controls when the workflow will run
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  push: # Triggers the workflow on every push to the repository
+    branches: [ "main" ] #  ... but only for the main branch.  Adjust as needed (e.g., "master", "*").
+  pull_request: # Triggers the workflow on every pull request
+    branches: [ "main" ] # ... targeting the main branch.
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build:
-
+  build: #  Name of the job.  Must be unique within this workflow file.
+    name: Build and Test # More descriptive name for the job, shown in the UI.
+    # The type of machine to run the job on.  ubuntu-latest is a good general-purpose choice.
     runs-on: ubuntu-latest
 
+    # Steps represent a sequence of tasks that will be executed as part of the job.
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access your code.
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17 #  Configures the Java Development Kit.  Change 17 to your project's version if needed.
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin' #  Use Temurin (Adoptium) distribution.  Good, open-source choice.
+          cache: maven #  For a Maven project.  If you use Gradle, change to 'gradle'.
 
-    # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+      #  Optionally, you might need to set up other tools (e.g., Node.js, Python) here.
+      #  Example for Node.js:
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '18.x'
+
+      #  Install project dependencies.  The 'install' command depends on your project type.
+      - name: Install Dependencies
+        run: mvn clean install -DskipTests # For Maven.  Faster if you skip tests during initial dependency download.
+        # If you were using Gradle, it would be something like:
+        # run: gradle dependencies
+
+      # Run the tests.  Again, the command depends on your project type.
+      - name: Run Tests
+        run: mvn test # For Maven
+        #  For Gradle:
+        # run: gradle test
+
+      #  Optionally, build an executable JAR or WAR file.
+      - name: Build with Maven
+        run: mvn package -DskipTests -Dmaven.compiler.source=17 -Dmaven.compiler.target=17 #  Or, for a Spring Boot project:  mvn package -DskipTests
+        # For Gradle:
+        # run: gradle build
+
+      #  Upload artifacts (e.g., JAR file) if you want to store them.
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-artifact #  Name you'll use to identify the artifact in the UI.
+          path: target/ #  Path to the directory containing the JAR or WAR file (adjust as needed).
+          #  If using Gradle, the path is likely build/libs/
