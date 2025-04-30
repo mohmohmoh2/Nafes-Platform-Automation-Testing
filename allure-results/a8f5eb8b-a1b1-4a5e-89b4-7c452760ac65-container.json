@@ -1,0 +1,1 @@
+{"uuid":"a8f5eb8b-a1b1-4a5e-89b4-7c452760ac65","name":"login.TC01_Login.setUp","children":["b00ca931-ede0-4835-8c6d-52e973f2b33d"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1746001327642,"stop":1746001331123}],"afters":[],"start":1746001327642,"stop":1746001331125}

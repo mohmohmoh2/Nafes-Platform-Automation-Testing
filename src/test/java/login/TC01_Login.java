@@ -1,4 +1,4 @@
-package tests.login;
+package login;
 
 import DriverSettings.DriverManager;
 import Pages.P01_Home;
@@ -19,15 +19,6 @@ import static utilities.DataUtils.getJsonData;
 import static utilities.DataUtils.getPropertyValue;
 
 public class TC01_Login {
-    private static final String EXPECTED_URL;
-
-    static {
-        try {
-            EXPECTED_URL = getPropertyValue("config", "BASE_URL");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     @BeforeMethod
     public void setUp() throws IOException {

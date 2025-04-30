@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09e8c4bc-43b7-45c4-b2b7-f26948698222" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DriverSettings/DriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/P01_Home.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/DataUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/LogsUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/P03_Monfsaty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/P03_MyRFPs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/P04_MyProposals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/login/TC02_Logout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/monafsaty/TC03_AddMonafsaToFavorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/monafsaty/TC04_RemoveMonafsaFromFavorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myProposals/TC10_AddNewProposal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myProposals/TC11_ChangeProposalToInreview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myProposals/TC12_ChangeProposalToSubmitted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myProposals/TC13_EditProposal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myProposals/TC14_AddCommentToMyProposal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myProposals/TC15_RemoveProposal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC05_UploadRFP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC06_UpdateTheRFPStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC07_AddAttachmentsToRFP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC08_DeleteRFP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC09_AddFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/login/TC01_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/login/TC01_Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +57,8 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor": "Run",
+    "TestNG.TC01_Login.executor": "Run",
     "TestNG.TC01_Login.testLogin.executor": "Run",
     "TestNG.tc02_Ask_Author.executor": "Run",
     "git-widget-placeholder": "main",
@@ -60,17 +72,26 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="TC01_Login.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="GoodReads Automation" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.login.TC01_Login" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.login" />
-      <option name="MAIN_CLASS_NAME" value="tests.login.TC01_Login" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="login" />
+      <option name="MAIN_CLASS_NAME" value="login.TC01_Login" />
       <option name="METHOD_NAME" value="testLogin" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
