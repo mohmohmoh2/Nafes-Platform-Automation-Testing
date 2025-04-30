@@ -1,75 +1,37 @@
-# This is a basic workflow for running a Java project with tests on GitHub Actions
-name: Java CI # Name of your workflow.  Will appear in the Actions tab of your repository.
+name: Java CI with Maven
 
-# Controls when the workflow will run
 on:
-  push: # Triggers the workflow on every push to the repository
-    branches: [ "main" ] #  ... but only for the main branch.  Adjust as needed (e.g., "master", "*").
-  pull_request: # Triggers the workflow on every pull request
-    branches: [ "main" ] # ... targeting the main branch.
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build: #  Name of the job.  Must be unique within this workflow file.
-    name: Build and Test # More descriptive name for the job, shown in the UI.
-    # The type of machine to run the job on.  ubuntu-latest is a good general-purpose choice.
+  build:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job.
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access your code.
-      - uses: actions/checkout@v4
-      - name: Set up JDK 17 #  Configures the Java Development Kit.  Change 17 to your project's version if needed.
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
-          distribution: 'temurin' #  Use Temurin (Adoptium) distribution.  Good, open-source choice.
-          cache: maven #  For a Maven project.  If you use Gradle, change to 'gradle'.
+          java-version: '21'
+          distribution: 'temurin'
 
-      #  Check Java version
-      - name: Check Java Version
-        run: |
-          echo "Java version:"
-          java -version
-
-      #  Check Maven version
-      - name: Check Maven Version
-        run: |
-          echo "Maven version:"
-          mvn -v
-
-      #  Optionally, you might need to set up other tools (e.g., Node.js, Python) here.
-      #  Example for Node.js:
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '18.x'
-
-      #  Install project dependencies.  The 'install' command depends on your project type.
-      - name: Install Dependencies
-        run: mvn clean install -DskipTests # For Maven.  Faster if you skip tests during initial dependency download.
-        # If you were using Gradle, it would be something like:
-        # run: gradle dependencies
-
-      # Run the tests.  Again, the command depends on your project type.
-      - name: Run Tests
-        run: mvn test # For Maven
-        #  For Gradle:
-        # run: gradle test
-
-      #  Optionally, build an executable JAR or WAR file.
-      - name: Build with Maven
-        run: |
-          mvn clean package -DskipTests \
-          -Dmaven.compiler.source=17 \
-          -Dmaven.compiler.target=17
-        # For Gradle:
-        # run: gradle build
-
-      #  Upload artifacts (e.g., JAR file) if you want to store them.
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
         with:
-          name: application-artifact #  Name you'll use to identify the artifact in the UI.
-          path: target/ #  Path to the directory containing the JAR or WAR file (adjust as needed).
-          #  If using Gradle, the path is likely build/libs/
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Install dependencies
+        run: mvn clean install -DskipTests
+
+      - name: Run tests
+        run: mvn test
