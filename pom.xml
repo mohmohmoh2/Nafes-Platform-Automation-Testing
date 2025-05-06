@@ -19,6 +19,7 @@
         <surefire>3.2.5</surefire>
         <commonIO>2.15.0</commonIO>
         <allureMaven>2.12.0</allureMaven>
+        <aspectj.version>1.9.24</aspectj.version>
         <suite.regression>Test Runner/RegressionSuite.xml</suite.regression>
     </properties>
 
@@ -26,7 +27,7 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.9.24</version>
+            <version>${aspectj.version}</version>
             <scope>runtime</scope>
         </dependency>
 
