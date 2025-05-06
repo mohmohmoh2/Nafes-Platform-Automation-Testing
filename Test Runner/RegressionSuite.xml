@@ -1,8 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >
-<suite name="Regression Suite">
+<suite name="Regression Suite" verbose="1">
     <test name="Regression Test">
+
         <classes>
-            <class name="login.TC01_Login"/>
+
+            <class name="login.TC01_Login" />
+            <class name="login.TC02_Logout"/>
+            <class name="monafsaty.TC03_AddMonafsaToFavorite"/>
+            <class name="monafsaty.TC04_RemoveMonafsaFromFavorite"/>
         </classes>
     </test>
+
 </suite>

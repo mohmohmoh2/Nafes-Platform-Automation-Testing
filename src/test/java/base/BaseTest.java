@@ -1,17 +1,17 @@
-package login;
+package base;
 
 import DriverSettings.DriverManager;
 import Pages.P01_Home;
 import Pages.P02_Login;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -20,9 +20,9 @@ import static DriverSettings.DriverManager.*;
 import static utilities.DataUtils.getJsonData;
 import static utilities.DataUtils.getPropertyValue;
 
-public class TC01_Login {
+public class BaseTest {
 
-
+    public Logger log = LogManager.getLogger();
     @BeforeMethod
     public void setUp() throws IOException {
         String driverType = getPropertyValue("config", "driverType");
@@ -31,12 +31,13 @@ public class TC01_Login {
         getDriver().get(getPropertyValue("config", "BASE_URL"));
         getDriver().manage().window().maximize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
-    @Test
-    public void testLogin() throws IOException {
+        log.info("Browser opened");
+
+
         // Navigate to the login page
         P01_Home homePage = new P01_Home(getDriver());
         homePage.goToLoginPage();
+
         // Perform login
         P02_Login loginPage = new P02_Login(getDriver());
         loginPage.enterUsername(getJsonData("login", "email"))
@@ -47,16 +48,25 @@ public class TC01_Login {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlToBe(getPropertyValue("config", "ACCOUNT_URL")));
 
-
-        // Perform the assertion
-        Assert.assertEquals(getDriver().getCurrentUrl(), getPropertyValue("config", "ACCOUNT_URL"));
-
+        // Close the chat widget
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("hubspot-conversations-iframe")));
+        ((JavascriptExecutor) driver).executeScript("""
+        const el = document.querySelector('#hubspot-messages-iframe-container');
+        if (el) {
+            el.setAttribute('style', 'display: none !important; visibility: hidden !important;');
+        }
+        """);
+        log.info("Chat widget is disabled");
 
     }
+
 
     @AfterMethod
     public void tearDown() {
         // TODO: Close the browser
+        log.info("Closing the browser \n ");
         quitDriver();
     }
+
+
 }
