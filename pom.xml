@@ -83,20 +83,6 @@
 
     </dependencies>
 
-    <!-- Add allure-bom to dependency management to ensure correct versions of all the dependencies are used -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-bom</artifactId>
-                <version>${allure.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-
 
     <build>
         <plugins>
@@ -109,9 +95,7 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>Test Runner/RegressionSuite.xml</suiteXmlFile>
-                    </suiteXmlFiles>
+
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -141,9 +125,7 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>
-                                    ${suite.regression}
-                                </suiteXmlFile>
+
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>

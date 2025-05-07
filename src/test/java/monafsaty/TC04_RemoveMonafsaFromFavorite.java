@@ -14,8 +14,8 @@ public class TC04_RemoveMonafsaFromFavorite extends BaseTest {
     @Test
     public void removeMonafsaFromFavorite() {
         // Create an instance of the main page
-        Pages.P03_Main mainPage = new Pages.P03_Main(getDriver());
-        mainPage.clickMonafsaty()
+        Pages.P04_Monfsaty Monfsaty = new Pages.P04_Monfsaty(getDriver());
+        Monfsaty.clickMonafsaty()
                 .clickMonasfatyDropdown()
                 .clickSuitableMonafsatButton()
                 .clickRemoveFromFavoriteButton()
@@ -23,10 +23,10 @@ public class TC04_RemoveMonafsaFromFavorite extends BaseTest {
 
         // Wait until the element is visible
         new WebDriverWait(getDriver(), Duration.ofSeconds(20))
-                .until(driver -> driver.findElement(mainPage.monafsaTitleLocator).isDisplayed());
+                .until(driver -> driver.findElement(Monfsaty.monafsaTitleLocator).isDisplayed());
 
         // Verify that the monafsa is removed from favorites
-        Assert.assertNotEquals(mainPage.getMonafsaTitle(), mainPage.monafsaTitle);
+        Assert.assertNotEquals(Monfsaty.getMonafsaTitle(), Monfsaty.monafsaTitle);
 
     }
 }

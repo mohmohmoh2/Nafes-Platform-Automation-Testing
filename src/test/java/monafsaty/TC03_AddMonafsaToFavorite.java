@@ -19,8 +19,8 @@ public class TC03_AddMonafsaToFavorite extends BaseTest {
     public void addMonafsaToFavorite() {
 
         // Create an instance of the main page
-        Pages.P03_Main mainPage = new Pages.P03_Main(getDriver());
-        mainPage.clickMonafsaty()
+        Pages.P04_Monfsaty Monfsaty = new Pages.P04_Monfsaty(getDriver());
+        Monfsaty.clickMonafsaty()
                 .clickToFavoriteButton();
 
         // Wait until the element is visible

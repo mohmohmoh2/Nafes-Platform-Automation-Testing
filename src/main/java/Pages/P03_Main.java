@@ -9,13 +9,7 @@ import static utilities.Utility.*;
 public class P03_Main {
     // Locators
     private final By loginPageButton = By.xpath("//*[@id=\"__next\"]/div/div[1]/div[1]/div[2]/ul/div[3]/li[2]/a");
-    private final By monafsatyButton = By.xpath("//a[@href='/account/my-tenders']");
-    private final By monasfatyDropdown = By.xpath("//a[@class=\"has-sub active\"]");
-    private final By toFavoriteButton = By.xpath("//button[@class=\"add-to-fav action-icon \"]");
-    private final By suitableMonafsatButton = By.xpath("//a[@href='/account/my-tenders/favorites']");
-    private final By removeFromFavoriteButton = By.xpath("//button[@class='add-to-fav fav-icon ']");
-    public final By monafsaTitleLocator = By.xpath("//div[2]/div[2]/h1");
-    private final By okButton = By.xpath("//button[@class=\"exit-btn continue\"]");
+
 
     private final WebDriver driver;
     public Logger log = LogManager.getLogger();
@@ -34,56 +28,6 @@ public class P03_Main {
         clickingOnElement(driver, loginPageButton);
     }
 
-    //TODO: Click on Monafsaty
-    public P03_Main clickMonafsaty() {
-        log.info("Clicking on Monafsaty button");
-        clickingOnElement(driver, monafsatyButton);
-        return this;
-    }
-
-    //TODO: Click on toFavoriteButton
-    public void clickToFavoriteButton() {
-        log.info("Add to Favorite For Monafsa: {}", getText(driver, monafsaTitleLocator));
-        clickingOnElement(driver, toFavoriteButton);
-    }
-
-    //TODO: Click on Monafsaty Dropdown
-    public P03_Main clickMonasfatyDropdown() {
-        log.info("Clicking on Monasfaty Dropdown");
-        clickingOnElement(driver, monasfatyDropdown);
-        return this;
-    }
-
-    //TODO: Click on suitableMonafsatButton
-    public P03_Main clickSuitableMonafsatButton() {
-        log.info("Clicking on Right Sign For Sutable Monafsat");
-        clickingOnElement(driver, suitableMonafsatButton);
-        return this;
-    }
-
-    //TODO: Get Monafsa Title
-    public String getMonafsaTitle() {
-        return getText(driver, monafsaTitleLocator);
-    }
-
-    //TODO: Get Monafsa Title
-    public void setMonafsaTitle() {
-        this.monafsaTitle = getMonafsaTitle();
-    }
-
-    //TODO: Click on removeFromFavoriteButton
-    public P03_Main clickRemoveFromFavoriteButton() {
-        setMonafsaTitle();
-        log.info("Remove From Favorite For Monafsa: {}", monafsaTitle);
-        clickingOnElement(driver, removeFromFavoriteButton);
-        return this;
-    }
-
-    //TODO: Click on okButton
-    public void clickOkButton() {
-        log.info("Clicking on Ok button from the popup");
-        clickingOnElement(driver, okButton);
-    }
 
 
 
