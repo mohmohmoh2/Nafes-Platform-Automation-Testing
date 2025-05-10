@@ -9,7 +9,7 @@ public class P01_Home {
     private final WebDriver driver;
 
     // Locators
-    private final By loginPageButton = By.xpath("//a[@class='btn login']");
+    private final By loginPageButton = By.xpath("//*[@id=\"__next\"]/div/div[1]/div[1]/div[2]/div[2]/a[1]");
 
     // TODO: Create a constructor
     public P01_Home(WebDriver driver) {

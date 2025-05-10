@@ -3,7 +3,6 @@
     <test name="Regression Test">
 
         <classes>
-
             <class name="login.TC01_Login" />
             <class name="login.TC02_Logout"/>
             <class name="monafsaty.TC03_AddMonafsaToFavorite"/>
