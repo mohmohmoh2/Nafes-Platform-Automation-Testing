@@ -1,4 +1,4 @@
-package myBids;
+package myProposals;
 
 import Pages.P03_Main;
 import Pages.P06_MyBids;
@@ -10,6 +10,8 @@ import static DriverSettings.DriverManager.getDriver;
 
 public class TC10_AddNewBid extends BaseTest {
 
+
+
     @Test
     public void addNewProposal() {
         // Navigate to the Bids page
@@ -18,7 +20,7 @@ public class TC10_AddNewBid extends BaseTest {
 
         P06_MyBids myProposalsPage = new P06_MyBids(getDriver());
         myProposalsPage.clickNewButton()
-                .enterSearchText("باب")  // Enter text in the search field
+                .enterSearchText("باا")  // Enter text in the search field
                 .clickSearchIcon()  // Click the search icon
                 .clickFirstSearchResult()  // Click the first search result
                 .clickNextButton()  // Click the Next button
@@ -26,12 +28,7 @@ public class TC10_AddNewBid extends BaseTest {
                 .clickSaveButton();  // Click the Save button
 
         //   Verify that the proposal was added successfully
-        // Expected title
-        String expectedTitle = myProposalsPage.monafsaResultTitle;
-        // Actual title
-        String actualTitle = myProposalsPage.getFirstBidTitle();
-        // Assert that the actual title matches the expected title
-        Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertEquals(myProposalsPage.getFirstBidTitle(), myProposalsPage.monafsaResultTitle);
 
     }
 

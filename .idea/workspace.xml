@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="09e8c4bc-43b7-45c4-b2b7-f26948698222" name="Changes" comment="" />
-=======
     <list default="true" id="09e8c4bc-43b7-45c4-b2b7-f26948698222" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P01_Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P01_Home.java" afterDir="false" />
     </list>
->>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,45 +34,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor": "Run",
-    "TestNG.Regression.executor": "Run",
-    "TestNG.TC01_Login.executor": "Run",
-    "TestNG.TC01_Login.testLogin.executor": "Run",
-    "TestNG.TC02_Logout.executor": "Run",
-    "TestNG.TC02_Logout.testLogout.executor": "Run",
-    "TestNG.TC03_AddMonafsaToFavorite.executor": "Run",
-    "TestNG.TC04_RemoveMonafsaFromFavorite.executor": "Run",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    "TestNG.TC10_AddNewBid.executor": "Run",
-    "TestNG.TC10_AddNewProposal.executor": "Run",
-    "TestNG.TC11_RemoveBid.executor": "Run",
-    "TestNG.Unnamed.executor": "Run",
-    "TestNG.tc02_Ask_Author.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-=======
-    "TestNG.Unnamed.executor": "Run",
-    "TestNG.tc02_Ask_Author.executor": "Run",
-    "git-widget-placeholder": "feature/initial-setup",
->>>>>>> Stashed changes
-=======
-    "TestNG.Unnamed.executor": "Run",
-    "TestNG.tc02_Ask_Author.executor": "Run",
-    "git-widget-placeholder": "feature/initial-setup",
->>>>>>> Stashed changes
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Github/Nafes-Platform-Automation-Testing",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Regression.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC01_Login.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC01_Login.testLogin.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC02_Logout.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC02_Logout.testLogout.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC03_AddMonafsaToFavorite.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC04_RemoveMonafsaFromFavorite.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.tc02_Ask_Author.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github/Nafes-Platform-Automation-Testing&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Github\Nafes-Platform-Automation-Testing\src\main" />

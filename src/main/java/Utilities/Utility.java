@@ -24,20 +24,6 @@ public class Utility {
         driver.findElement(locator).click();
     }
 
-    public static void clickingOnElementJS(WebDriver driver, By locator) {
-        WebElement button = driver.findElement(locator);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
-    }
-
-    public static void clickingOnElementFromList(WebDriver driver, By locator, int index) {
-        WebElement ele = driver.findElements(locator).get(index);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", ele);
-
-        new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.elementToBeClickable(locator));
-        ele.click();
-    }
-
     public static void enterData(WebDriver driver, By locator, String data) {
         new WebDriverWait(driver, Duration.ofSeconds(20))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -51,35 +37,18 @@ public class Utility {
 
     }
 
-    public static String getTextFromList(WebDriver driver, By locator, int index) {
-        new WebDriverWait(driver, Duration.ofSeconds(20))
-                .until(ExpectedConditions.visibilityOfElementLocated(locator));
-        return driver.findElements(locator).get(index).getText();
-    }
-
     public static WebDriverWait generalWait(WebDriver driver) {
         return new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
-    public static void refreshPage(WebDriver driver) {
-        driver.navigate().refresh();
-    }
-
-    public static void scrolling(WebDriver driver, By locator, int index) {
-        WebElement ele;
-        if (index == -1) {
-            ele = (WebElement) driver.findElements(locator);
-        } else {
-            ele = driver.findElements(locator).get(index);
-        }
+    public static void scrolling(WebDriver driver, By locator) {
         Actions actions = new Actions(driver);
-        actions.moveToElement(ele).perform();
+        actions.moveToElement(findWebElement(driver, locator)).perform();
     }
 
     public static void scrollingJS(WebDriver driver, By locator) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", findWebElement(driver, locator));
     }
-
 
     public static WebElement findWebElement(WebDriver driver, By locator) {
         return driver.findElement(locator);
