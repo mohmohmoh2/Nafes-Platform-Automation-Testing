@@ -1,4 +1,4 @@
 package myProposals;
 
-public class TC14_AddCommentToMyProposal {
+public class TC15_AddCommentToMyProposal {
 }

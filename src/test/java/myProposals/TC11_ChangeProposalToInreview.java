@@ -1,4 +1,4 @@
 package myProposals;
 
-public class TC11_ChangeProposalToInreview {
+public class TC12_ChangeProposalToInreview {
 }
