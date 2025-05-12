@@ -49,14 +49,14 @@ public class BaseTest {
         wait.until(ExpectedConditions.urlToBe(getPropertyValue("config", "ACCOUNT_URL")));
 
         // Close the chat widget
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("hubspot-conversations-iframe")));
-        ((JavascriptExecutor) driver).executeScript("""
-        const el = document.querySelector('#hubspot-messages-iframe-container');
-        if (el) {
-            el.setAttribute('style', 'display: none !important; visibility: hidden !important;');
-        }
-        """);
-        log.info("Chat widget is disabled");
+//        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("hubspot-conversations-iframe")));
+//        ((JavascriptExecutor) driver).executeScript("""
+//        const el = document.querySelector('#hubspot-messages-iframe-container');
+//        if (el) {
+//            el.setAttribute('style', 'display: none !important; visibility: hidden !important;');
+//        }
+//        """);
+//        log.info("Chat widget is disabled");
 
     }
 

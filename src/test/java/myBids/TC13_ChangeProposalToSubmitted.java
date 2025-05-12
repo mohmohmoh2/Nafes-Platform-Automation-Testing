@@ -1,4 +1,4 @@
 package myBids;
 
-public class TC12_ChangeProposalToSubmitted {
+public class TC13_ChangeProposalToSubmitted {
 }

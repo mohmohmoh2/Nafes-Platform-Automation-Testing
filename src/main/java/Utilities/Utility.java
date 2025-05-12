@@ -24,6 +24,15 @@ public class Utility {
         driver.findElement(locator).click();
     }
 
+    public static void clickingOnElementJS(WebDriver driver, By locator) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", findWebElement(driver, locator));
+    }
+    public static void clickingOnElementFromList(WebDriver driver, By locator, int index) {
+        new WebDriverWait(driver, Duration.ofSeconds(20))
+                .until(ExpectedConditions.elementToBeClickable(locator));
+        driver.findElements(locator).get(index).click();
+    }
+
     public static void enterData(WebDriver driver, By locator, String data) {
         new WebDriverWait(driver, Duration.ofSeconds(20))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -37,6 +46,12 @@ public class Utility {
 
     }
 
+    public static String getTextFromList(WebDriver driver, By locator, int index) {
+        new WebDriverWait(driver, Duration.ofSeconds(20))
+                .until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return driver.findElements(locator).get(index).getText();
+    }
+
     public static WebDriverWait generalWait(WebDriver driver) {
         return new WebDriverWait(driver, Duration.ofSeconds(20));
     }
@@ -48,6 +63,11 @@ public class Utility {
 
     public static void scrollingJS(WebDriver driver, By locator) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", findWebElement(driver, locator));
+    }
+
+    public static void scrollingToElementFromList(WebDriver driver, By locator, int index) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElements(locator).get(index)).perform();
     }
 
     public static WebElement findWebElement(WebDriver driver, By locator) {
@@ -121,5 +141,9 @@ public class Utility {
         Arrays.sort(files, Comparator.comparingLong(File::lastModified).reversed());
 
         return files[0];
+    }
+
+    public static void refreshPage(WebDriver driver) {
+        driver.navigate().refresh();
     }
 }
