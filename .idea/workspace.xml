@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e8c4bc-43b7-45c4-b2b7-f26948698222" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/P06_MyBids.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/myBids/TC10_AddNewBid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P03_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P03_Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P06_MyProposals.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/monafsaty/TC03_AddMonafsaToFavorite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/monafsaty/TC03_AddMonafsaToFavorite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myProposals/TC10_AddNewProposal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myProposals/TC11_ChangeProposalToInreview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC12_ChangeProposalToInreview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myProposals/TC12_ChangeProposalToSubmitted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC13_ChangeProposalToSubmitted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myProposals/TC13_EditProposal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC14_EditProposal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myProposals/TC14_AddCommentToMyProposal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC15_AddCommentToMyProposal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myProposals/TC15_RemoveProposal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC11_RemoveBid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" afterDir="false" />
-    </list>
+    <list default="true" id="09e8c4bc-43b7-45c4-b2b7-f26948698222" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +48,7 @@
     "TestNG.TC11_RemoveBid.executor": "Run",
     "TestNG.Unnamed.executor": "Run",
     "TestNG.tc02_Ask_Author.executor": "Run",
-    "git-widget-placeholder": "feature/initial-setup",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Github/Nafes-Platform-Automation-Testing",
