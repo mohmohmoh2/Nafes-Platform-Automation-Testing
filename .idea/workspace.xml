@@ -50,6 +50,7 @@
     "TestNG.TC03_AddMonafsaToFavorite.executor": "Run",
     "TestNG.TC04_RemoveMonafsaFromFavorite.executor": "Run",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "TestNG.TC10_AddNewBid.executor": "Run",
     "TestNG.TC10_AddNewProposal.executor": "Run",
     "TestNG.TC11_RemoveBid.executor": "Run",
@@ -57,6 +58,11 @@
     "TestNG.tc02_Ask_Author.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+=======
+    "TestNG.Unnamed.executor": "Run",
+    "TestNG.tc02_Ask_Author.executor": "Run",
+    "git-widget-placeholder": "feature/initial-setup",
+>>>>>>> Stashed changes
 =======
     "TestNG.Unnamed.executor": "Run",
     "TestNG.tc02_Ask_Author.executor": "Run",
