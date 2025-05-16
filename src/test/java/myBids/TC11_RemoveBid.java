@@ -18,7 +18,6 @@ public class TC11_RemoveBid extends BaseTest {
 
         P06_MyBids myBidsPage = new P06_MyBids(getDriver());
         myBidsPage.clickBidMenuIcon(1).clickDeleteBidButton(); // Click on the bid menu icon
-        // Verify that the proposal was added successfully
 
         // Verify that the bid was removed successfully
         Assert.assertFalse(myBidsPage.isBidPresent());

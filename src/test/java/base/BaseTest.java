@@ -65,7 +65,7 @@ public class BaseTest {
     public void tearDown() {
         // TODO: Close the browser
         log.info("Closing the browser \n ");
-        quitDriver();
+        //quitDriver();
     }
 
 

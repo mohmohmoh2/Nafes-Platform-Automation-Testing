@@ -8,6 +8,8 @@
             <class name="monafsaty.TC03_AddMonafsaToFavorite"/>
             <class name="monafsaty.TC04_RemoveMonafsaFromFavorite"/>
             <class name="myBids.TC10_AddNewBid"/>
+            <class name="myBids.TC12_ChangeProposalToInreview"/>
+            <class name="myBids.TC13_ChangeProposalToSubmitted"/>
             <class name="myBids.TC11_RemoveBid"/>
         </classes>
     </test>

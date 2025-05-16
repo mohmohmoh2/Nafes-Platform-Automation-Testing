@@ -6,8 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
-
 import static utilities.Utility.*;
 
 public class P06_MyBids {
@@ -29,6 +27,14 @@ public class P06_MyBids {
     private final By bidTitles = By.xpath("//div[@class=\"bid-item\"]//h3"); // Bid titles
     private final By deleteBidButton = By.xpath("//div[@class=\"show dropdown\"]//a[3]"); // Delete bid button
     private final By editBidButton = By.xpath("//div[@class=\"show dropdown\"]//a[1]"); // Edit bid button
+    private final By inReviewBidCheckbox = By.xpath("//div/div/div[2]/div/label"); // In Review bid checkbox
+    private final By statusLabelStuding = By.xpath("//p[@class=\"status studying\"]"); // Status label
+    private final By submittedcheckbox = By.xpath("//div[4]/div/label"); // Submitted bid checkbox
+    private final By bidSalary = By.xpath("//input[@class=\"form-control\"]"); // Bid salary
+    private final By saveSubmittedButton = By.xpath("//div[@class=\"modalBody\"]//button[@class=\"btn\"]"); // Save submitted button
+    private final By statusLabelSubmited = By.xpath("//p[@class=\"status offerDone\"]"); // Status label
+
+
 
 
 
@@ -72,7 +78,7 @@ public class P06_MyBids {
     // TODO: Create a method to get the title of the first search result
     public void getFirstSearchResultTitle() {
         monafsaResultTitle = getText(driver, firstSearchResultTitle);
-        log.info("First search result title:\n" + monafsaResultTitle + "\n");
+        log.info("First search result title:\n{}\n", monafsaResultTitle);
     }
 
     // TODO: Create a method to click on the Next button
@@ -94,7 +100,7 @@ public class P06_MyBids {
     // TODO: Create a method to get the title of the first participant
     public void getFirstParticipantTitle() {
         firstParticipantTitleText = getText(driver, firstParticipantTitle);
-        log.info("First participant title: \n" + firstParticipantTitleText + "\n");
+        log.info("First participant title: \n{}\n", firstParticipantTitleText);
     }
 
     // TODO: Create a method to click on the Save button
@@ -155,6 +161,48 @@ public class P06_MyBids {
         log.info("Is the bid present? {}", isPresent);
         return isPresent;
     }
+
+    // TODO: Create a method to click on inReview bid checkbox
+    public void clickInReviewBidCheckbox() {
+        clickingOnElement(driver, inReviewBidCheckbox);
+        log.info("Clicked on the In Review bid checkbox");
+    }
+
+    // TODO: Create a method to get the text of the status label
+    public String getStatusLabelText() {
+        String statusText = getText(driver, statusLabelStuding);
+        log.info("Status label text: \n{}\n", statusText);
+        return statusText;
+    }
+
+    // TODO: Create a method to click on the submitted bid checkbox
+    public P06_MyBids clickSubmittedBidCheckbox() {
+        clickingOnElement(driver, submittedcheckbox);
+        log.info("Clicked on the Submitted bid checkbox");
+        return this;
+    }
+
+    // TODO: Create a method to enter bid salary
+    public P06_MyBids enterBidSalary(String salary) {
+        enterData(driver, bidSalary, salary);
+        log.info("Entered bid salary: {}", salary);
+        return this;
+    }
+
+    // TODO: Create a method to click on the save submitted button
+    public void clickSaveSubmittedButton() {
+        clickingOnElement(driver, saveSubmittedButton);
+        log.info("Clicked on the Save submitted button");
+    }
+
+    // TODO: Create a method to assert that the locator is displayed
+    public boolean isLocatorDisplayed() {
+        boolean isDisplayed = driver.findElement(statusLabelSubmited).isDisplayed();
+        log.info("Is the locator displayed? {}", isDisplayed);
+        return isDisplayed;
+    }
+
+
 
 
 }
