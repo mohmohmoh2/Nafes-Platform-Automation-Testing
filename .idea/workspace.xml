@@ -6,12 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="09e8c4bc-43b7-45c4-b2b7-f26948698222" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P06_MyBids.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P06_MyBids.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P03_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P03_Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P05_MyRFPs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P05_MyRFPs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myBids/TC11_RemoveBid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC11_RemoveBid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myBids/TC12_ChangeProposalToInreview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC12_ChangeProposalToInreview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myBids/TC13_ChangeProposalToSubmitted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC13_ChangeProposalToSubmitted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/login/TC01_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/login/TC01_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/login/TC02_Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/login/TC02_Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/myRFPs/TC05_UploadRFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC05_UploadRFP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +52,7 @@
     "TestNG.TC02_Logout.testLogout.executor": "Run",
     "TestNG.TC03_AddMonafsaToFavorite.executor": "Run",
     "TestNG.TC04_RemoveMonafsaFromFavorite.executor": "Run",
+    "TestNG.TC05_UploadRFP.executor": "Run",
     "TestNG.TC10_AddNewBid.executor": "Run",
     "TestNG.TC11_RemoveBid.executor": "Run",
     "TestNG.TC12_ChangeProposalToInreview.executor": "Run",

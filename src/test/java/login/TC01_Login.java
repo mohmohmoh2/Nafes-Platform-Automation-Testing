@@ -43,13 +43,16 @@ public class TC01_Login {
                 .enterPassword(getJsonData("login", "password"))
                 .clickLogin();
 
+
+        String expectedUrl = getPropertyValue("config", "BASE_URL") + getPropertyValue("config", "ACCOUNT_URL");
+
         // Wait for the URL to change to the expected one
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.urlToBe(getPropertyValue("config", "ACCOUNT_URL")));
+        wait.until(ExpectedConditions.urlToBe(expectedUrl));
 
 
         // Perform the assertion
-        Assert.assertEquals(getDriver().getCurrentUrl(), getPropertyValue("config", "ACCOUNT_URL"));
+        Assert.assertEquals(getDriver().getCurrentUrl(), expectedUrl);
 
 
     }

@@ -23,13 +23,13 @@ public class TC02_Logout extends BaseTest {
         P03_Main mainPage = new P03_Main(getDriver());
         mainPage.clickLogout();
 
-        // Verify that the user is logged out
         String expectedUrl = getPropertyValue("config", "BASE_URL");
-        String actualUrl = getDriver().getCurrentUrl();
-
         // Wait for the URL to change to the expected one
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlToBe(expectedUrl));
+
+        // Verify that the user is logged out
+        String actualUrl = getDriver().getCurrentUrl();
 
         // Perform the assertion
         Assert.assertEquals(actualUrl, expectedUrl);

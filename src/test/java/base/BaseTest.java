@@ -46,7 +46,10 @@ public class BaseTest {
 
         // Wait for the URL to change to the expected one
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.urlToBe(getPropertyValue("config", "ACCOUNT_URL")));
+
+        String expectedUrl = getPropertyValue("config", "BASE_URL") + getPropertyValue("config", "ACCOUNT_URL");
+
+        wait.until(ExpectedConditions.urlToBe(expectedUrl));
 
         // Close the chat widget
 //        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("hubspot-conversations-iframe")));

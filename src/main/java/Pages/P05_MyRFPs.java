@@ -1,32 +1,30 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import static utilities.Utility.clickingOnElement;
 
 public class P05_MyRFPs {
     private final WebDriver driver;
+
+    // Locators
+    private final By uploadRFPButton = By.xpath("//button[@class=\"btn addKoraseh\"]");
 
     // TODO: Create a constructor
     public P05_MyRFPs(WebDriver driver) {
         this.driver = driver;
     }
 
-    private void navigateToRFPUploadPage() {
-        // Code to navigate to the RFP upload page
+    // TODO: Create a method to click on the upload RFP button
+    public void clickUploadRFPButton() {
+        clickingOnElement(driver, uploadRFPButton);
     }
 
-    private void fillInRFPDetails() {
-        // Code to fill in the RFP details
-    }
 
-    private void uploadRFDocument() {
-        // Code to upload the RFP document
-    }
 
-    private void submitRFP() {
-        // Code to submit the RFP
-    }
 
-    private void verifySuccessMessage() {
-        // Code to verify the success message after submission
-    }
+
+
+
 }
