@@ -20,7 +20,7 @@ public class TC10_AddNewBid extends BaseTest {
 
         P06_MyBids myProposalsPage = new P06_MyBids(getDriver());
         myProposalsPage.clickNewButton()
-                .enterSearchText("اا")  // Enter text in the search field
+                .enterSearchText("ام")  // Enter text in the search field
                 .clickSearchIcon()  // Click the search icon
                 .clickFirstSearchResult()  // Click the first search result
                 .clickNextButton()  // Click the Next button
