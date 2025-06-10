@@ -6,12 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static utilities.Utility.*;
+import static Utilities.Utility.*;
 
 public class P06_MyBids {
     private final WebDriver driver;
-    public Logger log = LogManager.getLogger();
-
     // Locators
     private final By newButton = By.xpath("//button[@class=\"btn addNew\"]"); // New Proposal button
     private final By searchMonafsaField = By.xpath("//div[1]/div/input"); // Search field
@@ -33,18 +31,15 @@ public class P06_MyBids {
     private final By bidSalary = By.xpath("//input[@class=\"form-control\"]"); // Bid salary
     private final By saveSubmittedButton = By.xpath("//div[@class=\"modalBody\"]//button[@class=\"btn\"]"); // Save submitted button
     private final By statusLabelSubmited = By.xpath("//p[@class=\"status offerDone\"]"); // Status label
-
-
-
-
-
-
+    public Logger log = LogManager.getLogger();
     public String monafsaResultTitle = "";
     public String firstParticipantTitleText = "";
     public String deleteBidTitleText = "";
 
     // TODO: Create a constructor
-    public P06_MyBids(WebDriver driver) {this.driver = driver;}
+    public P06_MyBids(WebDriver driver) {
+        this.driver = driver;
+    }
 
     // TODO: Create a method to click on the New Proposal button
     public P06_MyBids clickNewButton() {
@@ -201,8 +196,6 @@ public class P06_MyBids {
         log.info("Is the locator displayed? {}", isDisplayed);
         return isDisplayed;
     }
-
-
 
 
 }

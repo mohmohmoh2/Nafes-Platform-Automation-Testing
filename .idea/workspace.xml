@@ -6,6 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="d3c85ffc-fe64-4049-a914-11356f995ff1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P01_Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P01_Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P02_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P02_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P03_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P03_Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P04_Monfsaty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P04_Monfsaty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P05_MyRFPs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P05_MyRFPs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P06_MyBids.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P06_MyBids.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/DataUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/DataUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/LogsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/LogsUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/login/TC01_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/login/TC01_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/login/TC02_Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/login/TC02_Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/myRFPs/TC05_UploadRFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC05_UploadRFP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/myRFPs/TC08_DeleteRFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC08_DeleteRFP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +36,9 @@
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2xa4d9j7Efbw5VNYYhESZli4MZp" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -32,21 +47,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor": "Run",
-    "TestNG.TC10_AddNewBid.executor": "Run",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Github/Nafes-Platform-Automation-Testing",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC05_UploadRFP.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC10_AddNewBid.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.regression.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github/Nafes-Platform-Automation-Testing&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Github\Nafes-Platform-Automation-Testing\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="regression" type="TestNG">
+      <module name="Nafes" />
+      <shortenClasspath name="NONE" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d3c85ffc-fe64-4049-a914-11356f995ff1" name="Changes" comment="" />

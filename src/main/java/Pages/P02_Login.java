@@ -3,8 +3,8 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
-import static utilities.Utility.*;
+import static Utilities.Utility.clickingOnElement;
+import static Utilities.Utility.enterData;
 
 
 public class P02_Login {

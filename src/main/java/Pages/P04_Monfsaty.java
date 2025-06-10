@@ -5,22 +5,22 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static utilities.Utility.clickingOnElement;
-import static utilities.Utility.getText;
+import static Utilities.Utility.clickingOnElement;
+import static Utilities.Utility.getText;
+
 
 public class P04_Monfsaty {
+    public final By monafsaTitleLocator = By.xpath("//div[2]/div[2]/h1");
     private final WebDriver driver;
-    public Logger log = LogManager.getLogger();
-    public String monafsaTitle = "";
-
     // Locators
     private final By monafsatyButton = By.xpath("//a[@href='/account/my-tenders']");
     private final By monasfatyDropdown = By.xpath("//a[@class=\"has-sub active\"]");
     private final By toFavoriteButton = By.xpath("//button[@class=\"add-to-fav action-icon \"]");
     private final By suitableMonafsatButton = By.xpath("//a[@href='/account/my-tenders/favorites']");
     private final By removeFromFavoriteButton = By.xpath("//button[@class='add-to-fav fav-icon ']");
-    public final By monafsaTitleLocator = By.xpath("//div[2]/div[2]/h1");
     private final By okButton = By.xpath("//button[@class=\"exit-btn continue\"]");
+    public Logger log = LogManager.getLogger();
+    public String monafsaTitle = "";
 
     // TODO: Create a constructor
     public P04_Monfsaty(WebDriver driver) {

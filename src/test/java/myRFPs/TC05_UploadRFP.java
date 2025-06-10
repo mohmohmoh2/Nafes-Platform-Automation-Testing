@@ -10,8 +10,6 @@ import static DriverSettings.DriverManager.getDriver;
 public class TC05_UploadRFP extends BaseTest {
 
 
-
-
     @Test
     public void testUploadRFP() {
         P03_Main mainPage = new P03_Main(getDriver());
@@ -19,7 +17,12 @@ public class TC05_UploadRFP extends BaseTest {
 
         // Create an instance of the P05_MyRFPs class
         P05_MyRFPs myRFPsPage = new P05_MyRFPs(getDriver());
-        myRFPsPage.clickUploadRFPButton();
+        myRFPsPage.clickUploadRFPButton()
+                .clickSearchForMonafsaButton()
+                .enterMonafsaSearchInput("ا")
+                .clickMonafsaSearchButton()
+                .uploadRFPFile("D:\\Github\\Nafes-Platform-Automation-Testing\\src\\test\\resources\\tender.pdf")
+                .waitForFileUpload();
 
     }
 

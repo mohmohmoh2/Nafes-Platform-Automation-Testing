@@ -2,7 +2,6 @@ package login;
 
 import Pages.P03_Main;
 import base.BaseTest;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -12,7 +11,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import static DriverSettings.DriverManager.getDriver;
-import static utilities.DataUtils.getPropertyValue;
+import static Utilities.DataUtils.getPropertyValue;
 
 public class TC02_Logout extends BaseTest {
 

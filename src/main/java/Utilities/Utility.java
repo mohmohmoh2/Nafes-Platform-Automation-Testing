@@ -1,4 +1,4 @@
-package utilities;
+package Utilities;
 
 import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
@@ -8,6 +8,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -27,6 +30,7 @@ public class Utility {
     public static void clickingOnElementJS(WebDriver driver, By locator) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", findWebElement(driver, locator));
     }
+
     public static void clickingOnElementFromList(WebDriver driver, By locator, int index) {
         new WebDriverWait(driver, Duration.ofSeconds(20))
                 .until(ExpectedConditions.elementToBeClickable(locator));
@@ -93,6 +97,33 @@ public class Utility {
 
             // Attach the screenshot to Allure
             Allure.addAttachment(screenshotName, Files.newInputStream(Path.of(screenshotFile.getPath())));
+        } catch (Exception e) {
+            LogsUtils.error(e.getMessage());
+        }
+    }
+
+    public static void uploadFileRobot(WebDriver driver, By locator, String filePath) {
+        try {
+            // Create a Robot instance
+            Robot robot = new Robot();
+
+            // Click on the element to open the file dialog
+            clickingOnElement(driver, locator);
+
+            // Wait for the file dialog to open
+            Thread.sleep(1000);
+
+            // Type the file path into the file dialog
+            StringSelection stringSelection = new StringSelection(filePath);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+
+            // Press Enter to confirm the file selection
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
         } catch (Exception e) {
             LogsUtils.error(e.getMessage());
         }

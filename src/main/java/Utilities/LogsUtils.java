@@ -1,4 +1,4 @@
-package utilities;
+package Utilities;
 
 import io.qameta.allure.Allure;
 import org.apache.logging.log4j.LogManager;

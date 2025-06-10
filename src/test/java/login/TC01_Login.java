@@ -3,8 +3,6 @@ package login;
 import DriverSettings.DriverManager;
 import Pages.P01_Home;
 import Pages.P02_Login;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,8 +15,8 @@ import java.io.IOException;
 import java.time.Duration;
 
 import static DriverSettings.DriverManager.*;
-import static utilities.DataUtils.getJsonData;
-import static utilities.DataUtils.getPropertyValue;
+import static Utilities.DataUtils.getJsonData;
+import static Utilities.DataUtils.getPropertyValue;
 
 public class TC01_Login {
 
@@ -32,6 +30,7 @@ public class TC01_Login {
         getDriver().manage().window().maximize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
+
     @Test
     public void testLogin() throws IOException {
         // Navigate to the login page
