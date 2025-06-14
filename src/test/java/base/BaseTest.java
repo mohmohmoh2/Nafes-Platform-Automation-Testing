@@ -14,8 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
 import java.time.Duration;
 
-import static DriverSettings.DriverManager.getDriver;
-import static DriverSettings.DriverManager.setDriver;
+import static DriverSettings.DriverManager.*;
 import static Utilities.DataUtils.getJsonData;
 import static Utilities.DataUtils.getPropertyValue;
 
