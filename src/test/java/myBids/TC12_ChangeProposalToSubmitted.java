@@ -8,18 +8,19 @@ import org.testng.annotations.Test;
 
 import static DriverSettings.DriverManager.getDriver;
 
-public class TC11_RemoveBid extends BaseTest {
+public class TC12_ChangeProposalToSubmitted extends BaseTest {
 
     @Test
-    public void removeBid() {
+    public void changeProposalToSubmitted() {
+
         // Navigate to the Bids page
         P03_Main mainPage = new P03_Main(getDriver());
         mainPage.clickMyBids();
 
         P06_MyBids myBidsPage = new P06_MyBids(getDriver());
-        myBidsPage.clickBidMenuIcon(1).clickDeleteBidButton(); // Click on the bid menu icon
+        myBidsPage.clickBidMenuIcon(1).clickSubmittedBidCheckbox().enterBidSalary("100").clickSaveSubmittedButton(); // Click on the bid menu icon
 
-        // Verify that the bid was removed successfully
-        Assert.assertFalse(myBidsPage.isBidPresent());
+        // Assert that the locator is displayed
+        Assert.assertTrue(myBidsPage.isLocatorDisplayed(), "The bid is not present");
     }
 }

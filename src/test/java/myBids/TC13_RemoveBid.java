@@ -8,20 +8,18 @@ import org.testng.annotations.Test;
 
 import static DriverSettings.DriverManager.getDriver;
 
-public class TC12_ChangeProposalToInreview extends BaseTest {
+public class TC13_RemoveBid extends BaseTest {
 
     @Test
-    public void changeProposalToInReview() {
-
+    public void removeBid() {
         // Navigate to the Bids page
         P03_Main mainPage = new P03_Main(getDriver());
         mainPage.clickMyBids();
 
         P06_MyBids myBidsPage = new P06_MyBids(getDriver());
-        myBidsPage.clickBidMenuIcon(1).clickInReviewBidCheckbox(); // Click on the bid menu icon
+        myBidsPage.clickBidMenuIcon(1).clickDeleteBidButton(); // Click on the bid menu icon
 
-        Assert.assertEquals(myBidsPage.getStatusLabelText(), "قيد التحضير");
-
-
+        // Verify that the bid was removed successfully
+        Assert.assertFalse(myBidsPage.isBidPresent());
     }
 }
