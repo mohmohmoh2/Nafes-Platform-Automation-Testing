@@ -4,13 +4,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static Utilities.Utility.clickingOnElement;
-import static Utilities.Utility.uploadFileRobot;
+import static Utilities.Utility.*;
 
 public class P05_MyRFPs {
     private final WebDriver driver;
@@ -19,11 +19,14 @@ public class P05_MyRFPs {
     private final By searchForMonafsaButton = By.xpath("//*[contains(@id, 'react-aria-') and contains(@id, '-tab-1')]");
     private final By monafsaSearchInput = By.cssSelector("div.row > div:nth-child(1) > div > input");
     private final By monafsaSearchButton = By.cssSelector("div.row > div:nth-child(1) > div > button");
-    private final By uploadRFPButton2 = By.cssSelector("div:nth-child(1) > div.btn-container > button.icons-wrapper2");
+    private final By uploadRFPButton2 = By.xpath("//*[contains(@id, 'react-aria')]/div[3]/div[1]/div[2]/button[1]");
     private final By closeButton = By.xpath("//button[@class=\"close-modal\"]");
 
-    private final By menuButton = By.cssSelector(".left-side:nth-child(1)");
-
+    private final By menuIcons = By.xpath("//div[@class=\"left-side\"]//button");
+    private final By deleteRFPTitles = By.xpath("//div[@class=\"tenderName\"]/h5");
+    public String deleteRFPTitle;
+    private final By deleteRFPButton = By.xpath("//div[@class=\"dropdown-menu show\"]//a[2]");
+    private final By confirmDeleteButton = By.xpath("//div[@class=\"swal2-actions\"]/button[1]");
 
     public Logger log = LogManager.getLogger();
 
@@ -69,9 +72,54 @@ public class P05_MyRFPs {
     // TODO: Wait for the file upload to complete
     public void waitForFileUpload() {
         // Implement waiting logic if necessary, e.g., wait for a success message or file to appear
-        new WebDriverWait(driver, Duration.ofSeconds(130)).until(ExpectedConditions.visibilityOfElementLocated(closeButton));
+        new WebDriverWait(driver, Duration.ofSeconds(130))
+                .until(ExpectedConditions.visibilityOfElementLocated(closeButton));
         log.info("File upload completed successfully");
     }
 
+    // TODO: Create a method to get the text of the delete RFP titles
+    public String getDeleteRFPTitlesText(int index) {
+        deleteRFPTitle = getTextFromList(driver, deleteRFPTitles, index);
+        return deleteRFPTitle;
+    }
+
+    // TODO: Create a method to click on the menu button
+    public P05_MyRFPs clickMenuButton(int elementOrder) {
+        int index = elementOrder - 1; // Convert to zero-based index
+        clickingOnElementFromList(driver, menuIcons, index);
+        log.info("Menu button clicked for: {}", getDeleteRFPTitlesText(index));
+        return this;
+    }
+
+    // TODO: Create a method to click on the delete RFP button
+    public P05_MyRFPs clickDeleteRFPButton() {
+        clickingOnElement(driver, deleteRFPButton);
+        log.info("Delete RFP button clicked");
+        return this;
+    }
+
+    // TODO: Create a method to confirm the deletion of RFP
+    public P05_MyRFPs confirmDeleteRFP() {
+        clickingOnElement(driver, confirmDeleteButton);
+        log.info("RFP deletion confirmed");
+        return this;
+    }
+
+    // TODO: Create a method to check if the RFP is deleted
+    public boolean isRFPPresent() {
+        // Check if the RFP title is not empty
+        if (driver.findElements(deleteRFPTitles).isEmpty()) {
+            log.error("RFP Is Deleted");
+            return false;
+        }
+
+        boolean isPresent = driver.findElements(deleteRFPTitles).stream()
+                .map(WebElement::getText)
+                .anyMatch(title -> title.equals(deleteRFPTitle));
+
+        log.info("RFP title: {}", deleteRFPTitle);
+        log.info("Is the RFP present? {}", isPresent);
+        return isPresent;
+    }
 
 }
