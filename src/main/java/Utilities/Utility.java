@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
@@ -34,6 +35,7 @@ public class Utility {
     public static void clickingOnElementFromList(WebDriver driver, By locator, int index) {
         new WebDriverWait(driver, Duration.ofSeconds(20))
                 .until(ExpectedConditions.elementToBeClickable(locator));
+        scrollingToElementFromList(driver, locator, index);
         driver.findElements(locator).get(index).click();
     }
 
@@ -47,7 +49,6 @@ public class Utility {
         new WebDriverWait(driver, Duration.ofSeconds(20))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
         return driver.findElement(locator).getText();
-
     }
 
     public static String getTextFromList(WebDriver driver, By locator, int index) {
@@ -104,6 +105,18 @@ public class Utility {
 
     public static void uploadFileRobot(WebDriver driver, By locator, String filePath) {
         try {
+            String userHome = System.getProperty("user.dir");
+            String absolutePath = userHome + File.separator + filePath;
+
+            // Check if the file exists
+            File file = new File(absolutePath);
+            if (!file.exists()) {
+                throw new FileNotFoundException("File not found: " + absolutePath);
+            }
+
+            // Log the file path
+            LogsUtils.info("Uploading file: " + absolutePath);
+
             // Create a Robot instance
             Robot robot = new Robot();
 
@@ -114,7 +127,7 @@ public class Utility {
             Thread.sleep(1000);
 
             // Type the file path into the file dialog
-            StringSelection stringSelection = new StringSelection(filePath);
+            StringSelection stringSelection = new StringSelection(absolutePath);
             Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_V);
@@ -177,5 +190,5 @@ public class Utility {
     public static void refreshPage(WebDriver driver) {
         driver.navigate().refresh();
     }
-    
+
 }

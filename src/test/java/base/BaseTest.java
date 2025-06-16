@@ -14,7 +14,8 @@ import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
 import java.time.Duration;
 
-import static DriverSettings.DriverManager.*;
+import static DriverSettings.DriverManager.getDriver;
+import static DriverSettings.DriverManager.setDriver;
 import static Utilities.DataUtils.getJsonData;
 import static Utilities.DataUtils.getPropertyValue;
 
@@ -68,7 +69,7 @@ public class BaseTest {
     public void tearDown() {
         // TODO: Close the browser
         log.info("Closing the browser \n ");
-        quitDriver();
+        //quitDriver();
     }
 
 

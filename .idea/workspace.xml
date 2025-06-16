@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b9c84b23-affd-45b2-9bd5-f99da662c343" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P05_MyRFPs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P05_MyRFPs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/myBids/TC12_ChangeProposalToSubmitted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC12_ChangeProposalToSubmitted.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/myRFPs/TC05_UploadRFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC05_UploadRFP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/myRFPs/TC06_UpdateTheRFPStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC06_UpdateTheRFPStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/myRFPs/TC08_DeleteRFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC08_DeleteRFP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestData/login.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestData/login.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +44,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.git.unshallow": "true",
     "TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor": "Run",
     "TestNG.TC05_UploadRFP.executor": "Run",
     "TestNG.TC05_UploadRFP.testUploadRFP.executor": "Run",
+    "TestNG.TC06_UpdateTheRFPStatus.updateRFPStatus.executor": "Run",
     "TestNG.TC08_DeleteRFP.executor": "Run",
     "TestNG.TC08_DeleteRFP.testDeleteRFP.executor": "Run",
+    "TestNG.TC12_ChangeProposalToSubmitted.changeProposalToSubmitted.executor": "Run",
     "TestNG.TC13_RemoveBid.removeBid.executor": "Run",
     "git-widget-placeholder": "main"
   }
@@ -52,7 +61,7 @@
       <recent name="D:\Github\Nafes-Platform-Automation-Testing\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TC08_DeleteRFP.testDeleteRFP">
+  <component name="RunManager">
     <configuration name="TC05_UploadRFP.testUploadRFP" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Nafes" />
       <extension name="coverage">
@@ -71,6 +80,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TC06_UpdateTheRFPStatus.updateRFPStatus" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Nafes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myRFPs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myRFPs" />
+      <option name="MAIN_CLASS_NAME" value="myRFPs.TC06_UpdateTheRFPStatus" />
+      <option name="METHOD_NAME" value="updateRFPStatus" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TC08_DeleteRFP.testDeleteRFP" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Nafes" />
       <extension name="coverage">
@@ -82,6 +109,24 @@
       <option name="PACKAGE_NAME" value="myRFPs" />
       <option name="MAIN_CLASS_NAME" value="myRFPs.TC08_DeleteRFP" />
       <option name="METHOD_NAME" value="testDeleteRFP" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TC12_ChangeProposalToSubmitted.changeProposalToSubmitted" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Nafes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myBids.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myBids" />
+      <option name="MAIN_CLASS_NAME" value="myBids.TC12_ChangeProposalToSubmitted" />
+      <option name="METHOD_NAME" value="changeProposalToSubmitted" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -127,15 +172,17 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TC06_UpdateTheRFPStatus.updateRFPStatus" />
         <item itemvalue="TestNG.TC08_DeleteRFP.testDeleteRFP" />
-        <item itemvalue="TestNG.TC13_RemoveBid.removeBid" />
+        <item itemvalue="TestNG.TC12_ChangeProposalToSubmitted.changeProposalToSubmitted" />
         <item itemvalue="TestNG.TC05_UploadRFP.testUploadRFP" />
+        <item itemvalue="TestNG.TC13_RemoveBid.removeBid" />
       </list>
     </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d3c85ffc-fe64-4049-a914-11356f995ff1" name="Changes" comment="" />
+      <changelist id="b9c84b23-affd-45b2-9bd5-f99da662c343" name="Changes" comment="" />
       <created>1748162936595</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

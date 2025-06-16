@@ -21,7 +21,7 @@ public class TC05_UploadRFP extends BaseTest {
                 .clickSearchForMonafsaButton()
                 .enterMonafsaSearchInput("ا")
                 .clickMonafsaSearchButton()
-                .uploadRFPFile("D:\\Github\\Nafes-Platform-Automation-Testing\\src\\test\\resources\\tender.pdf")
+                .uploadRFPFile("src\\test\\resources\\tender.pdf")
                 .waitForFileUpload();
 
     }

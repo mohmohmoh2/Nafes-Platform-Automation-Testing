@@ -28,6 +28,9 @@ public class P05_MyRFPs {
     private final By deleteRFPButton = By.xpath("//div[@class=\"dropdown-menu show\"]//a[2]");
     private final By confirmDeleteButton = By.xpath("//div[@class=\"swal2-actions\"]/button[1]");
 
+    private final By inStudyingCheckbox = By.xpath("//div[@class=\"form-group status\"][1]//label");
+    private final By statusLabels = By.xpath("//div[contains(@class, 'koraseh-status')]/p");
+
     public Logger log = LogManager.getLogger();
 
     // TODO: Create a constructor
@@ -99,27 +102,43 @@ public class P05_MyRFPs {
     }
 
     // TODO: Create a method to confirm the deletion of RFP
-    public P05_MyRFPs confirmDeleteRFP() {
+    public void confirmDeleteRFP() {
         clickingOnElement(driver, confirmDeleteButton);
         log.info("RFP deletion confirmed");
-        return this;
     }
 
     // TODO: Create a method to check if the RFP is deleted
-    public boolean isRFPPresent() {
+    public boolean isRFPPresent() throws InterruptedException {
         // Check if the RFP title is not empty
         if (driver.findElements(deleteRFPTitles).isEmpty()) {
             log.error("RFP Is Deleted");
             return false;
         }
 
+        Thread.sleep(3000); // Wait for 3 seconds to ensure the page is refreshed
+
         boolean isPresent = driver.findElements(deleteRFPTitles).stream()
                 .map(WebElement::getText)
                 .anyMatch(title -> title.equals(deleteRFPTitle));
 
         log.info("RFP title: {}", deleteRFPTitle);
-        log.info("Is the RFP present? {}", isPresent);
         return isPresent;
     }
+
+    // TODO: Create a method to click on the In Studying checkbox
+    public P05_MyRFPs clickInStudyingCheckbox() {
+        clickingOnElement(driver, inStudyingCheckbox);
+        log.info("In Studying checkbox clicked");
+        return this;
+    }
+
+    // TODO: Create a method to get the status labels
+    public String getStatusLabel(int elementOrder) {
+        int index = elementOrder - 1; // Convert to zero-based index
+        String statusLabel = getTextFromList(driver, statusLabels, index);
+        log.info("Status label for index {}: {}", index, statusLabel);
+        return statusLabel;
+    }
+
 
 }
