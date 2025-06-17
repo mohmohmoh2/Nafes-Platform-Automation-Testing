@@ -11,7 +11,7 @@ public class TC06_UpdateTheRFPStatus extends BaseTest {
 
 
     @Test
-    public void updateRFPStatus() {
+    public void updateRFPStatus() throws InterruptedException {
         P03_Main mainPage = new P03_Main(getDriver());
         mainPage.clickMyRFPs();
 

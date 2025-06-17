@@ -3,6 +3,7 @@ package login;
 import DriverSettings.DriverManager;
 import Pages.P01_Home;
 import Pages.P02_Login;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -27,11 +28,11 @@ public class TC01_Login {
         WebDriver driver = DriverManager.createDriver(driverType);
         setDriver(driver);
         getDriver().get(getPropertyValue("config", "BASE_URL"));
-        getDriver().manage().window().maximize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @Test(testName = "Login Test Case")
+    @Step("Login Test Case")
     public void testLogin() throws IOException {
         // Navigate to the login page
         P01_Home homePage = new P01_Home(getDriver());

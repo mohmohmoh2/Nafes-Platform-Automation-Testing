@@ -30,7 +30,6 @@ public class BaseTest {
         WebDriver driver = DriverManager.createDriver(driverType);
         setDriver(driver);
         getDriver().get(getPropertyValue("config", "BASE_URL"));
-        getDriver().manage().window().maximize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         log.info("Browser opened");
 

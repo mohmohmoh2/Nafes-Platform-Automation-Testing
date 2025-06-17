@@ -126,14 +126,14 @@ public class P05_MyRFPs {
     }
 
     // TODO: Create a method to click on the In Studying checkbox
-    public P05_MyRFPs clickInStudyingCheckbox() {
+    public void clickInStudyingCheckbox() {
         clickingOnElement(driver, inStudyingCheckbox);
         log.info("In Studying checkbox clicked");
-        return this;
     }
 
     // TODO: Create a method to get the status labels
-    public String getStatusLabel(int elementOrder) {
+    public String getStatusLabel(int elementOrder) throws InterruptedException {
+        Thread.sleep(2000); // Wait for the status labels to be updated
         int index = elementOrder - 1; // Convert to zero-based index
         String statusLabel = getTextFromList(driver, statusLabels, index);
         log.info("Status label for index {}: {}", index, statusLabel);
