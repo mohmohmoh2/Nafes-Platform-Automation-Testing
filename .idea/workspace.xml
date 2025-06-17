@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9c84b23-affd-45b2-9bd5-f99da662c343" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,37 +33,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC05_UploadRFP.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC05_UploadRFP.testUploadRFP.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC06_UpdateTheRFPStatus.updateRFPStatus.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC08_DeleteRFP.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC08_DeleteRFP.testDeleteRFP.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC12_ChangeProposalToSubmitted.changeProposalToSubmitted.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC13_RemoveBid.removeBid.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor": "Run",
+    "TestNG.TC01_Login.testLogin.executor": "Run",
+    "TestNG.TC03_AddMonafsaToFavorite.addMonafsaToFavorite.executor": "Run",
+    "TestNG.TC05_UploadRFP.executor": "Run",
+    "TestNG.TC05_UploadRFP.testUploadRFP.executor": "Run",
+    "TestNG.TC06_UpdateTheRFPStatus.updateRFPStatus.executor": "Run",
+    "TestNG.TC08_DeleteRFP.executor": "Run",
+    "TestNG.TC08_DeleteRFP.testDeleteRFP.executor": "Run",
+    "TestNG.TC12_ChangeProposalToSubmitted.changeProposalToSubmitted.executor": "Run",
+    "TestNG.TC13_RemoveBid.removeBid.executor": "Run",
+    "git-widget-placeholder": "main"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github\Nafes-Platform-Automation-Testing\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.regression">
-    <configuration name="TC05_UploadRFP.testUploadRFP" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.TC03_AddMonafsaToFavorite.addMonafsaToFavorite">
+    <configuration name="TC01_Login.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Nafes" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="myRFPs.*" />
+          <option name="PATTERN" value="login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="myRFPs" />
-      <option name="MAIN_CLASS_NAME" value="myRFPs.TC05_UploadRFP" />
-      <option name="METHOD_NAME" value="testUploadRFP" />
+      <option name="PACKAGE_NAME" value="login" />
+      <option name="MAIN_CLASS_NAME" value="login.TC01_Login" />
+      <option name="METHOD_NAME" value="testLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TC03_AddMonafsaToFavorite.addMonafsaToFavorite" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Nafes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="monafsaty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="monafsaty" />
+      <option name="MAIN_CLASS_NAME" value="monafsaty.TC03_AddMonafsaToFavorite" />
+      <option name="METHOD_NAME" value="addMonafsaToFavorite" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -125,24 +145,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TC13_RemoveBid.removeBid" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Nafes" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="myBids.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="myBids" />
-      <option name="MAIN_CLASS_NAME" value="myBids.TC13_RemoveBid" />
-      <option name="METHOD_NAME" value="removeBid" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="regression" type="TestNG">
       <module name="Nafes" />
       <shortenClasspath name="NONE" />
@@ -163,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TC03_AddMonafsaToFavorite.addMonafsaToFavorite" />
+        <item itemvalue="TestNG.TC01_Login.testLogin" />
         <item itemvalue="TestNG.TC06_UpdateTheRFPStatus.updateRFPStatus" />
         <item itemvalue="TestNG.TC08_DeleteRFP.testDeleteRFP" />
         <item itemvalue="TestNG.TC12_ChangeProposalToSubmitted.changeProposalToSubmitted" />
-        <item itemvalue="TestNG.TC05_UploadRFP.testUploadRFP" />
-        <item itemvalue="TestNG.TC13_RemoveBid.removeBid" />
       </list>
     </recent_temporary>
   </component>
