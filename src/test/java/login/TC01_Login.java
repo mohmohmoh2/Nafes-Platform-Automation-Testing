@@ -31,7 +31,7 @@ public class TC01_Login {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @Test
+    @Test(testName = "Login Test Case")
     public void testLogin() throws IOException {
         // Navigate to the login page
         P01_Home homePage = new P01_Home(getDriver());
