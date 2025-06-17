@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b9c84b23-affd-45b2-9bd5-f99da662c343" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test Runner/RegressionSuite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/P05_MyRFPs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/P05_MyRFPs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myBids/TC12_ChangeProposalToSubmitted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myBids/TC12_ChangeProposalToSubmitted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myRFPs/TC05_UploadRFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC05_UploadRFP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myRFPs/TC06_UpdateTheRFPStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC06_UpdateTheRFPStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/myRFPs/TC08_DeleteRFP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myRFPs/TC08_DeleteRFP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestData/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/TestData/login.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestData/login.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,26 +32,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.git.unshallow": "true",
-    "TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor": "Run",
-    "TestNG.TC05_UploadRFP.executor": "Run",
-    "TestNG.TC05_UploadRFP.testUploadRFP.executor": "Run",
-    "TestNG.TC06_UpdateTheRFPStatus.updateRFPStatus.executor": "Run",
-    "TestNG.TC08_DeleteRFP.executor": "Run",
-    "TestNG.TC08_DeleteRFP.testDeleteRFP.executor": "Run",
-    "TestNG.TC12_ChangeProposalToSubmitted.changeProposalToSubmitted.executor": "Run",
-    "TestNG.TC13_RemoveBid.removeBid.executor": "Run",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC05_UploadRFP.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC05_UploadRFP.testUploadRFP.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC06_UpdateTheRFPStatus.updateRFPStatus.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC08_DeleteRFP.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC08_DeleteRFP.testDeleteRFP.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC12_ChangeProposalToSubmitted.changeProposalToSubmitted.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TC13_RemoveBid.removeBid.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github\Nafes-Platform-Automation-Testing\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.regression">
     <configuration name="TC05_UploadRFP.testUploadRFP" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Nafes" />
       <extension name="coverage">
