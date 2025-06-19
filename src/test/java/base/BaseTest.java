@@ -34,13 +34,13 @@ public class BaseTest {
         WebDriver driver = DriverManager.createDriverHeadless(driverType);
 
         setDriver(driver);
-        //getDriver().get(getPropertyValue("config", "BASE_URL"));
+        getDriver().get(getPropertyValue("config", "BASE_URL"));
 
         // Set the window size to 1920x1080
         getDriver().manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
 
         // Maximize the window
-        getDriver().manage().window().maximize();
+        //getDriver().manage().window().maximize();
 
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         log.info("Browser opened");
