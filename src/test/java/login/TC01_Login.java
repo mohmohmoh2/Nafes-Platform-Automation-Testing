@@ -25,10 +25,10 @@ public class TC01_Login {
     @BeforeMethod
     public void setUp() throws IOException {
         String driverType = getPropertyValue("config", "driverType");
-        WebDriver driver = DriverManager.createDriver(driverType);
+        WebDriver driver = DriverManager.createDriverHeadless(driverType);
         setDriver(driver);
         getDriver().get(getPropertyValue("config", "BASE_URL"));
-        getDriver().manage().window().maximize();
+        getDriver().manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
