@@ -99,7 +99,7 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <suiteXmlFiles>
-                        <suiteXmlFile>Test Runner/RegressionSuite.xml</suiteXmlFile>
+                        <suiteXmlFile>Test Runner/RegressionSuiteCI.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
 
