@@ -1,5 +1,6 @@
 package monafsaty;
 
+import Utilities.RetryAnalyzer;
 import base.BaseTest;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -11,7 +12,7 @@ import static DriverSettings.DriverManager.getDriver;
 
 public class TC04_RemoveMonafsaFromFavorite extends BaseTest {
 
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void removeMonafsaFromFavorite() {
         // Create an instance of the main page
         Pages.P04_Monfsaty Monfsaty = new Pages.P04_Monfsaty(getDriver());

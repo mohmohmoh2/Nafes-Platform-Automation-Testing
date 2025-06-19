@@ -14,8 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
 import java.time.Duration;
 
-import static DriverSettings.DriverManager.getDriver;
-import static DriverSettings.DriverManager.setDriver;
+import static DriverSettings.DriverManager.*;
 import static Utilities.DataUtils.getJsonData;
 import static Utilities.DataUtils.getPropertyValue;
 
@@ -29,19 +28,19 @@ public class BaseTest {
         String driverType = getPropertyValue("config", "driverType");
 
         // Create a new WebDriver instance based on the driver type specified in the config
-        //WebDriver driver = DriverManager.createDriver(driverType);
+        WebDriver driver = DriverManager.createDriver(driverType);
 
         // For headless mode, use the createDriverHeadless method
-        WebDriver driver = DriverManager.createDriverHeadless(driverType);
+        //WebDriver driver = DriverManager.createDriverHeadless(driverType);
 
         setDriver(driver);
         getDriver().get(getPropertyValue("config", "BASE_URL"));
 
         // Set the window size to 1920x1080
-        getDriver().manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
+        //getDriver().manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
 
         // Maximize the window
-        //getDriver().manage().window().maximize();
+        getDriver().manage().window().maximize();
 
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         log.info("Browser opened");
@@ -81,7 +80,7 @@ public class BaseTest {
     public void tearDown() {
         // TODO: Close the browser
         log.info("Closing the browser \n ");
-        //quitDriver();
+        quitDriver();
     }
 
 

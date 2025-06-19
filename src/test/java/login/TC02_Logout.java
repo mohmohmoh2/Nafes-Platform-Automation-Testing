@@ -1,6 +1,7 @@
 package login;
 
 import Pages.P03_Main;
+import Utilities.RetryAnalyzer;
 import base.BaseTest;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,7 +16,7 @@ import static Utilities.DataUtils.getPropertyValue;
 
 public class TC02_Logout extends BaseTest {
 
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testLogout() throws InterruptedException, IOException {
 
         // Click on the logout button

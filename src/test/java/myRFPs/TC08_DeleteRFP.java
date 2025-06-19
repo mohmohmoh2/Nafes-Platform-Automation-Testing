@@ -1,6 +1,7 @@
 package myRFPs;
 
 import Pages.P03_Main;
+import Utilities.RetryAnalyzer;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,7 +10,7 @@ import static DriverSettings.DriverManager.getDriver;
 
 public class TC08_DeleteRFP extends BaseTest {
 
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testDeleteRFP() throws InterruptedException {
         P03_Main mainPage = new P03_Main(getDriver());
         mainPage.clickMyRFPs();

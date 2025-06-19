@@ -2,6 +2,7 @@ package myRFPs;
 
 import Pages.P03_Main;
 import Pages.P05_MyRFPs;
+import Utilities.RetryAnalyzer;
 import base.BaseTest;
 import org.testng.annotations.Test;
 
@@ -10,7 +11,7 @@ import static DriverSettings.DriverManager.getDriver;
 public class TC05_UploadRFP extends BaseTest {
 
 
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void testUploadRFP() {
         P03_Main mainPage = new P03_Main(getDriver());
         mainPage.clickMyRFPs();

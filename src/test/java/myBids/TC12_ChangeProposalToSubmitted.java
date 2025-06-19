@@ -2,6 +2,7 @@ package myBids;
 
 import Pages.P03_Main;
 import Pages.P06_MyBids;
+import Utilities.RetryAnalyzer;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,7 +12,7 @@ import static Utilities.Utility.generateRandomNumber;
 
 public class TC12_ChangeProposalToSubmitted extends BaseTest {
 
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void changeProposalToSubmitted() {
 
         // Navigate to the Bids page

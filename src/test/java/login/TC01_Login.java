@@ -3,6 +3,7 @@ package login;
 import DriverSettings.DriverManager;
 import Pages.P01_Home;
 import Pages.P02_Login;
+import Utilities.RetryAnalyzer;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,7 +33,7 @@ public class TC01_Login {
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @Test(testName = "Login Test Case")
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     @Step("Login Test Case")
     public void testLogin() throws IOException {
         // Navigate to the login page
