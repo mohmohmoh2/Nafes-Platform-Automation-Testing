@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b9c84b23-affd-45b2-9bd5-f99da662c343" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,27 +39,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;TestNG.C:/Users/Mohamed Abdullah/Documents/GitHub/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC01_Login.testLogin.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC03_AddMonafsaToFavorite.addMonafsaToFavorite.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC05_UploadRFP.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC05_UploadRFP.testUploadRFP.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC06_UpdateTheRFPStatus.updateRFPStatus.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC08_DeleteRFP.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC08_DeleteRFP.testDeleteRFP.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC10_AddNewBid.addNewProposal.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC12_ChangeProposalToSubmitted.changeProposalToSubmitted.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TC13_RemoveBid.removeBid.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.regression.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/Mohamed Abdullah/Documents/GitHub/Nafes-Platform-Automation-Testing/src/test/java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.C:/Users/Mohamed Abdullah/Documents/GitHub/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor": "Run",
+    "TestNG.D:/Github/Nafes-Platform-Automation-Testing/Test Runner/RegressionSuite.xml.executor": "Run",
+    "TestNG.TC01_Login.testLogin.executor": "Run",
+    "TestNG.TC03_AddMonafsaToFavorite.addMonafsaToFavorite.executor": "Run",
+    "TestNG.TC05_UploadRFP.executor": "Run",
+    "TestNG.TC05_UploadRFP.testUploadRFP.executor": "Run",
+    "TestNG.TC06_UpdateTheRFPStatus.updateRFPStatus.executor": "Run",
+    "TestNG.TC08_DeleteRFP.executor": "Run",
+    "TestNG.TC08_DeleteRFP.testDeleteRFP.executor": "Run",
+    "TestNG.TC10_AddNewBid.addNewProposal.executor": "Run",
+    "TestNG.TC12_ChangeProposalToSubmitted.changeProposalToSubmitted.executor": "Run",
+    "TestNG.TC13_RemoveBid.removeBid.executor": "Run",
+    "TestNG.regression.executor": "Run",
+    "git-widget-placeholder": "initial",
+    "last_directory_selection": "C:/Users/Mohamed Abdullah/Documents/GitHub/Nafes-Platform-Automation-Testing/src/test/java",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github\Nafes-Platform-Automation-Testing\src\test\resources" />
