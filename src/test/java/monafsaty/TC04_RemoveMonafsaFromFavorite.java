@@ -19,8 +19,8 @@ public class TC04_RemoveMonafsaFromFavorite extends BaseTest {
         Monfsaty.clickMonafsaty()
                 .clickMonasfatyDropdown()
                 .clickSuitableMonafsatButton()
-                .clickRemoveFromFavoriteButton()
-                .clickOkButton();
+                .clickRemoveFromFavoriteButton();
+        //.clickOkButton();
 
         // Wait until the element is visible
         new WebDriverWait(getDriver(), Duration.ofSeconds(20))

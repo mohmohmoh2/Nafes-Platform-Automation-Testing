@@ -28,16 +28,16 @@ public class BaseTest {
         String driverType = getPropertyValue("config", "driverType");
 
         // Create a new WebDriver instance based on the driver type specified in the config
-        WebDriver driver = DriverManager.createDriver(driverType);
+        //WebDriver driver = DriverManager.createDriver(driverType);
 
         // For headless mode, use the createDriverHeadless method
-        //WebDriver driver = DriverManager.createDriverHeadless(driverType);
+        WebDriver driver = DriverManager.createDriverHeadless(driverType);
 
         setDriver(driver);
-        getDriver().get(getPropertyValue("config", "BASE_URL"));
+        //getDriver().get(getPropertyValue("config", "BASE_URL"));
 
         // Set the window size to 1920x1080
-        //getDriver().manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
+        getDriver().manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
 
         // Maximize the window
         getDriver().manage().window().maximize();
