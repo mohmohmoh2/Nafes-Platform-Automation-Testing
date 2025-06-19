@@ -13,7 +13,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <seleniumVersion>4.33.0</seleniumVersion>
-        <testNGVersion>7.9.0</testNGVersion>
+        <testNGVersion>7.11.0</testNGVersion>
         <gsonVersion>2.13.1</gsonVersion>
         <allure.version>2.29.1</allure.version>
         <surefire>3.2.5</surefire>
@@ -48,12 +48,6 @@
             <version>${seleniumVersion}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${testNGVersion}</version>
-            <scope>test</scope>
-        </dependency>
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -81,6 +75,11 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testNGVersion}</version>
+        </dependency>
     </dependencies>
 
     <build>
