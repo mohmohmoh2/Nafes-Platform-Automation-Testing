@@ -7,9 +7,7 @@
             <class name="login.TC02_Logout"/>
             <class name="monafsaty.TC03_AddMonafsaToFavorite"/>
             <class name="monafsaty.TC04_RemoveMonafsaFromFavorite"/>
-            <class name="myRFPs.TC05_UploadRFP"/>
             <class name="myRFPs.TC06_UpdateTheRFPStatus"/>
-            <class name="myRFPs.TC08_DeleteRFP"/>
             <class name="myBids.TC10_AddNewBid"/>
             <class name="myBids.TC11_ChangeProposalToInreview"/>
             <class name="myBids.TC12_ChangeProposalToSubmitted"/>

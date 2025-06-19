@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 
 public class DriverManager {
@@ -26,8 +28,16 @@ public class DriverManager {
                 chromeOptions.addArguments("--headless=new");
                 yield new ChromeDriver(chromeOptions);
             }
-            case "firefox" -> new FirefoxDriver();
-            case "edge" -> new EdgeDriver();
+            case "firefox" -> {
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addArguments("--headless");
+                yield new FirefoxDriver(firefoxOptions);
+            }
+            case "edge" -> {
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--headless=new");
+                yield new EdgeDriver(edgeOptions);
+            }
             default -> throw new IllegalArgumentException("Invalid driver type: " + driverType);
         };
     }
