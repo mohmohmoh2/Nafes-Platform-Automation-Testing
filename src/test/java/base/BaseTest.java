@@ -53,6 +53,7 @@ public class BaseTest {
         // Navigate to the login page
         P01_Home homePage = new P01_Home(getDriver());
         homePage.goToLoginPage();
+        
 
         // Perform login
         P02_Login loginPage = new P02_Login(getDriver());
