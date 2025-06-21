@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.IOException;
@@ -23,8 +24,8 @@ public class BaseTest {
 
     public Logger log = LogManager.getLogger();
 
-    @BeforeMethod
-    public void setUp() throws IOException {
+    @BeforeClass
+    public void openBrowser(String browser) throws IOException {
         String driverType = getPropertyValue("config", "driverType");
 
         // Create a new WebDriver instance based on the driver type specified in the config
@@ -44,7 +45,10 @@ public class BaseTest {
 
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         log.info("Browser opened");
+    }
 
+    @BeforeMethod
+    public void login() throws IOException {
 
         // Navigate to the login page
         P01_Home homePage = new P01_Home(getDriver());
@@ -62,6 +66,7 @@ public class BaseTest {
         String expectedUrl = getPropertyValue("config", "BASE_URL") + getPropertyValue("config", "ACCOUNT_URL");
 
         wait.until(ExpectedConditions.urlToBe(expectedUrl));
+        log.info("Logged in successfully \n ");
 
         // Close the chat widget
 //        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("hubspot-conversations-iframe")));
